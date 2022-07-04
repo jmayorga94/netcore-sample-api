@@ -21,6 +21,7 @@ namespace sample_app.Controllers
             hostMachine.Name = Environment.MachineName;
             hostMachine.OsVersion = Environment.OSVersion.ToString();
             hostMachine.Processors = Environment.ProcessorCount.ToString();
+            hostMachine.ThreatId = Environment.CurrentManagedThreadId.ToString();
 
             return Ok(hostMachine);
         }
